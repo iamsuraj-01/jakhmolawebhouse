@@ -257,13 +257,21 @@
 /* Icon styles */
 .circle-image-container .icon {
     position: absolute;
-    font-size: 22px; /* Icon size */
+    font-size: 23px; /* Icon size */
     color: #6244C5; /* Icon color */
     background-color: white; /* Icon background */
     border-radius: 50%;
     padding: 10px;
     z-index: 2;
 }
+
+/* Icon-specific colors */
+.icon-1 i { color: #1DA1F2; } /* Paper Plane - Twitter Blue */
+.icon-2 i { color: #4CAF50; } /* Globe - Green */
+.icon-3 i { color: #FF5722; } /* Envelope - Orange */
+.icon-4 i { color: #3b5998; } /* Thumbs Up - Facebook Blue */
+.icon-5 i { color: #FF0000; } /* Heart - Red */
+.icon-6 i { color: #8A2BE2; } /* Home - Purple */
 
 /* Positioning icons around the image in a circular pattern */
 .icon-1 { top: 12px; left: 22%; transform: translateX(-50%); }

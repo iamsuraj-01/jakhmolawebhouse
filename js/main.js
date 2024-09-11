@@ -62,12 +62,13 @@
         // Extract text and icon data
         var typed_strings = $('.typed-text').text().split(', ');
         var icon_classes = [
-            'fas fa-laptop-code',  // Web Designing
-            'fas fa-bullhorn',     // Digital Marketing
-            'fas fa-chart-line',   // SEO
-            'fas fa-paint-brush',  // Apps Designer
-            'fas fa-code'          // Apps Developer
-        ];
+            'fas fa-code',              // Web Development
+            'fas fa-bullhorn',          // Digital Marketing
+            'fas fa-user-graduate',     // Internship Program
+            'fas fa-bullseye',          // Branding Promotion
+            'fas fa-share-alt',         // Social Media Marketing
+            'fas fa-store'              // Local Business Building
+        ];        
     
         // Combine text and icons into HTML strings
         var combined_strings = typed_strings.map(function(text, index) {
