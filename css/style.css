@@ -24,6 +24,10 @@
     color: #FFC448;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 .back-to-top {
     position: fixed;
     display: none;
@@ -304,12 +308,17 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 1;
+    transition: opacity 0.3s ease; /* Smooth transition for hiding */
+}
+
+.service-card .overlay h4 {
+    font-size: 1.9rem;
 }
 
 /* Hidden Content for Hover Effect */
@@ -318,7 +327,7 @@
     left: 0;
     right: 0;
     bottom: -100%; /* Start the hover content below the card */
-    background: #6244C5; /* Slightly darker overlay for hover */
+    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
     transition: bottom 0.3s ease; /* Slide in effect */
     z-index: 2;
     display: flex;
@@ -326,12 +335,21 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    border-top-left-radius: 100% 30px; /* Curved top left corner */
+    border-top-right-radius: 100% 30px; /* Curved top right corner */
 }
 
 /* Hover Effect for Service Card */
 .service-card:hover .hover-content {
     bottom: 0; /* Slide the content up to cover the card */
+}
+
+/* Hide Icon and Heading on Hover */
+.service-card:hover .overlay i,
+.service-card:hover .overlay h4 {
+    opacity: 0; /* Make icon and heading invisible */
+    transition: opacity 0.3s ease; /* Smooth transition */
 }
 
 /* Icon at the Top Center */
@@ -349,7 +367,6 @@
 .service-card:hover img {
     transform: scale(1.1); /* Zoom in the image */
 }
-
 
 
 /*** Service Orignal 
