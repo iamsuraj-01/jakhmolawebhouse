@@ -122,10 +122,12 @@
     // Testimonials carousel
     var owl = $(".testimonial-carousel").owlCarousel({
         autoplay: false, // Disable autoplay to control manually
-        smartSpeed: 1000,
-        items: 1,
-        loop: true, 
-        dots: true // Disable dots
+        smartSpeed: 1000, // Speed of the transition
+        items: 1, // Display one item at a time
+        loop: true, // Enable looping
+        dots: true, // Enable dots for navigation
+        animateOut: 'fadeOut', // Add fade out effect
+        animateIn: 'fadeIn' // Add fade in effect
     });
 
     // Click event for left images
@@ -136,7 +138,7 @@
 
     // Click event for right images
     $('.testimonial-right .image-wrapper').click(function() {
-        var index = $(this).index(); // Get the index of the clicked wrapper
+        var index = $(this).index() + 3; // Get the index of the clicked wrapper and offset by 3
         owl.trigger('to.owl.carousel', [index, 300]); // Go to the corresponding testimonial
     });
 

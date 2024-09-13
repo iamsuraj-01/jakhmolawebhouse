@@ -459,12 +459,6 @@
 
 
 /*** Testimonial ***/
-.testimonial-left,
-.testimonial-right {
-    position: relative;
-    height: 100%; /* Ensure the container takes full height */
-}
-
 /* Add pulse animation to the main image in the center */
 .testimonial-carousel .testimonial-item .image-main-wrapper {
     position: relative; /* Set relative positioning to contain the pseudo-elements */
@@ -483,7 +477,7 @@
     display: block;
     width: 70%; /* Adjust size for pulse effect */
     height: 70%;
-    background: var(--primary);
+    background: var(--secondary);
     border-radius: 50%;
     animation: pulse-border 1500ms ease-out infinite;
 }
@@ -512,6 +506,12 @@
     border-radius: 60px;
 }
 
+.testimonial-left,
+.testimonial-right {
+    position: relative;
+    height: 100%; /* Ensure the container takes full height */
+}
+
 /* Wrapper around each image to apply the animation */
 .image-wrapper {
     position: absolute; /* Correct to absolute to allow for positioning */
@@ -528,8 +528,8 @@
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     display: block;
-    width: 90%; /* Adjust size for pulse effect */
-    height: 90%;
+    width: 70%; /* Adjust size for pulse effect */
+    height: 70%;
     background: var(--primary);
     border-radius: 50%;
     animation: pulse-border 1500ms ease-out infinite;
@@ -553,7 +553,13 @@
     z-index: 1; /* Keep the image above the pulse effect */
     border-radius: 50%; /* Maintain circular image style */
     padding: 5px;
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--primary);
+    transition: transform 0.5s ease; /* Smooth transition for zoom effect */
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.6); /* Zoom in the image to 110% */
+    cursor: pointer;
 }
 
 /* Specific positioning for each image wrapper */
@@ -588,7 +594,7 @@
     height: 120px;
 }
 
-/* Re-add CSS for owl dots */
+/* owl dots */
 .testimonial-carousel .owl-dots {
     height: 40px;
     margin-top: 25px;
