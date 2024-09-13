@@ -462,18 +462,103 @@
 .testimonial-left,
 .testimonial-right {
     position: relative;
+    height: 100%; /* Ensure the container takes full height */
 }
 
-.testimonial-left img,
-.testimonial-right img {
+/* Add pulse animation to the main image in the center */
+.testimonial-carousel .testimonial-item .image-main-wrapper {
+    position: relative; /* Set relative positioning to contain the pseudo-elements */
+    display: inline-block; /* Ensure wrapper fits around the image */
+    margin: 0 auto; /* Center the wrapper */
+}
+
+/* Pulsing effect animation for main image using pseudo-elements */
+.testimonial-carousel .testimonial-item .image-main-wrapper:before {
+    content: "";
     position: absolute;
+    z-index: 0; /* Place the pulse effect behind the image */
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 70%; /* Adjust size for pulse effect */
+    height: 70%;
+    background: var(--primary);
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+/* Reset styling for the main image within the wrapper */
+.testimonial-carousel .testimonial-item .image-main-wrapper img {
+    position: relative;
+    z-index: 1; /* Keep the image above the pulse effect */
+    border-radius: 50%; /* Maintain circular image style */
     padding: 5px;
     border: 1px solid var(--secondary);
-    border-radius: 70px;
 }
 
-.testimonial-left img:nth-child(1),
-.testimonial-right img:nth-child(3) {
+.testimonial-carousel .testimonial-icon {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid var(--secondary);
+    border-radius: 60px;
+}
+
+/* Wrapper around each image to apply the animation */
+.image-wrapper {
+    position: absolute; /* Correct to absolute to allow for positioning */
+    display: inline-block; /* Ensure wrapper fits around the image */
+    margin: 0; /* Reset margin to prevent extra space */
+}
+
+/* Pulsing effect animation using pseudo-elements */
+.image-wrapper:before {
+    content: "";
+    position: absolute;
+    z-index: 0; /* Place the pulse effect behind the image */
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 90%; /* Adjust size for pulse effect */
+    height: 90%;
+    background: var(--primary);
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+/* Keyframes for the pulse animation */
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) scale(2);
+        opacity: 0;
+    }
+}
+
+/* Reset styling for images within the wrapper */
+.image-wrapper img {
+    position: relative;
+    z-index: 1; /* Keep the image above the pulse effect */
+    border-radius: 50%; /* Maintain circular image style */
+    padding: 5px;
+    border: 1px solid var(--secondary);
+}
+
+/* Specific positioning for each image wrapper */
+.testimonial-left .image-wrapper:nth-child(1),
+.testimonial-right .image-wrapper:nth-child(3) {
     width: 70px;
     height: 70px;
     top: 10%;
@@ -481,8 +566,8 @@
     transform: translateX(-50%);
 }
 
-.testimonial-left img:nth-child(2),
-.testimonial-right img:nth-child(2) {
+.testimonial-left .image-wrapper:nth-child(2),
+.testimonial-right .image-wrapper:nth-child(2) {
     width: 60px;
     height: 60px;
     top: 50%;
@@ -490,8 +575,8 @@
     transform: translateY(-50%);
 }
 
-.testimonial-left img:nth-child(3),
-.testimonial-right img:nth-child(1) {
+.testimonial-left .image-wrapper:nth-child(3),
+.testimonial-right .image-wrapper:nth-child(1) {
     width: 50px;
     height: 50px;
     bottom: 10%;
@@ -503,25 +588,11 @@
     height: 120px;
 }
 
-.testimonial-carousel .testimonial-icon {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 50%;
-    bottom: -15px;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #FFFFFF;
-    border: 1px solid var(--secondary);
-    border-radius: 60px;
-}
-
+/* Re-add CSS for owl dots */
 .testimonial-carousel .owl-dots {
     height: 40px;
     margin-top: 25px;
-    display: flex;
+    display: none; /* add flex property to make dots visible */
     align-items: center;
     justify-content: center;
 }

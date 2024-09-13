@@ -11,10 +11,8 @@
     };
     spinner();
     
-    
     // Initiate the wowjs
     new WOW().init();
-
 
     // Navbar on scrolling
     $(window).scroll(function () {
@@ -24,7 +22,6 @@
             $('.navbar').fadeOut('slow').css('display', 'none');
         }
     });
-
 
     // Smooth scrolling on the navbar links
     $(".navbar-nav a").on('click', function (event) {
@@ -42,7 +39,6 @@
         }
     });
     
-    
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -55,7 +51,6 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
-    
 
     // Typed Initiate
     if ($('.typed-text-output').length == 1) {
@@ -85,8 +80,6 @@
             contentType: 'html'  // Enable HTML rendering
         });
     }
-    
-
 
     // Modal Video
     var $videoSrc;
@@ -99,8 +92,7 @@
     })
     $('#videoModal').on('hide.bs.modal', function (e) {
         $("#video").attr('src', $videoSrc);
-    })
-
+    });
 
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
@@ -108,14 +100,12 @@
         time: 2000
     });
 
-
     // Skills
     $('.skill').waypoint(function () {
         $('.progress .progress-bar').each(function () {
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
         });
     }, {offset: '80%'});
-
 
     // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
@@ -129,16 +119,26 @@
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
 
-
     // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
+    var owl = $(".testimonial-carousel").owlCarousel({
+        autoplay: false, // Disable autoplay to control manually
         smartSpeed: 1000,
         items: 1,
-        dots: true,
-        loop: true,
+        loop: true, 
+        dots: true // Disable dots
     });
 
-    
-})(jQuery);
+    // Click event for left images
+    $('.testimonial-left .image-wrapper').click(function() {
+        var index = $(this).index(); // Get the index of the clicked wrapper
+        owl.trigger('to.owl.carousel', [index, 300]); // Go to the corresponding testimonial
+    });
 
+    // Click event for right images
+    $('.testimonial-right .image-wrapper').click(function() {
+        var index = $(this).index(); // Get the index of the clicked wrapper
+        owl.trigger('to.owl.carousel', [index, 300]); // Go to the corresponding testimonial
+    });
+
+
+})(jQuery);
