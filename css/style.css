@@ -136,6 +136,7 @@
     color: var(--dark);
 }
 
+/* Youtube Button
 .btn-play {
     position: relative;
     display: block;
@@ -227,6 +228,68 @@
     background: #000000;
     opacity: 1;
 }
+*/
+
+.btn-play {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: none;
+    outline: none !important;
+    background: var(--primary);
+    cursor: pointer;
+}
+
+.btn-play:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    border-radius: 100%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+.btn-play:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    transition: all 200ms;
+}
+
+.btn-play i {
+    position: relative;
+    z-index: 2;
+    color: var(--primary);
+    font-size: 24px; /* Adjust size as needed */
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
 
 
 /*** About ***/
@@ -282,12 +345,12 @@
 .icon-6 i { color: #8A2BE2; } /* Home - Purple */
 
 /* Positioning icons around the image in a circular pattern */
-.icon-1 { top: 12px; left: 22%; transform: translateX(-50%); }
+.icon-1 { top: 38px; left: 10%; transform: translateX(-50%); }
 .icon-2 { top: 50%; right: -20px; transform: translateY(-50%); }
 .icon-3 { top: 82%; right: 50px; transform: translateX(-50%); }
 .icon-4 { top: 50%; left: -20px; transform: translateY(-50%); }
 .icon-5 { top: 10%; left: 80%; transform: translate(-50%, -50%); }
-.icon-6 { top: 90%; left: 18%; transform: translate(-50%, -50%); }
+.icon-6 { top: 83%; left: 11%; transform: translate(-50%, -50%); }
 
 /* Keyframes for circular movement and returning to exact positions */
 @keyframes move-and-return {
@@ -305,6 +368,22 @@
     50% { transform: translate(-5px, 5px); } /* Slight shift to the left and down */
     75% { transform: translate(5px, 5px); } /* Slight shift to the right and down */
     100% { transform: translate(0, 0); } /* Back to original position */
+}
+
+/* Apply a smooth transition to all icons */
+.circle-image-container .icon i,
+.icon-hover i {
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Zoom effect on hover for image icons */
+.circle-image-container .icon:hover i {
+    transform: scale(1.5); /* Zoom effect for image icons */
+}
+
+/* Zoom effect on hover for content icons */
+.icon-hover:hover i {
+    transform: scale(1.5); /* Zoom effect for content icons */
 }
 
 
@@ -424,6 +503,16 @@
 
 .portfolio-img {
     position: relative;
+}
+
+.portfolio-bg-1 {
+    background-color: #fff802;
+}
+.portfolio-bg-2 {
+    background-color: #fff; 
+}
+.portfolio-bg-3 {
+    background-color: black;
 }
 
 .portfolio-btn {

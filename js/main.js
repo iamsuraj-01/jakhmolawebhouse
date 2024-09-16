@@ -53,33 +53,34 @@
     });
 
     // Typed Initiate
-    if ($('.typed-text-output').length == 1) {
-        // Extract text and icon data
-        var typed_strings = $('.typed-text').text().split(', ');
-        var icon_classes = [
-            'fas fa-code',              // Web Development
-            'fas fa-bullhorn',          // Digital Marketing
-            'fas fa-user-graduate',     // Internship Program
-            'fas fa-bullseye',          // Branding Promotion
-            'fas fa-share-alt',         // Social Media Marketing
-            'fas fa-store'              // Local Business Building
-        ];        
-    
-        // Combine text and icons into HTML strings
-        var combined_strings = typed_strings.map(function(text, index) {
-            return '<i class="' + icon_classes[index].trim() + '"></i> ' + text;
-        });
-    
-        // Initialize Typed.js with HTML contentType
-        var typed = new Typed('.typed-text-output', {
-            strings: combined_strings,
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
-            loop: true,
-            contentType: 'html'  // Enable HTML rendering
-        });
-    }
+if ($('.typed-text-output').length == 1) {
+    // Extract text and icon data
+    var typed_strings = $('.typed-text').text().split(', ');
+    var icon_classes = [
+        'fas fa-code',              // Web Development
+        'fas fa-bullhorn',          // Digital Marketing
+        'fas fa-user-graduate',     // Internship Program
+        'fas fa-bullseye',          // Branding Promotion
+        'fas fa-share-alt',         // Social Media Marketing
+        'fas fa-store'              // Local Business Building
+    ];    
+
+    // Combine text and icons into HTML strings with inline styles
+    var combined_strings = typed_strings.map(function(text, index) {
+        return '<i class="' + icon_classes[index].trim() + '" style="color: #FFC448;"></i> ' + text;
+    });
+
+    // Initialize Typed.js with HTML contentType
+    var typed = new Typed('.typed-text-output', {
+        strings: combined_strings,
+        typeSpeed: 100,
+        backSpeed: 20,
+        smartBackspace: false,
+        loop: true,
+        contentType: 'html'  // Enable HTML rendering
+    });
+}
+
 
     // Modal Video
     var $videoSrc;
