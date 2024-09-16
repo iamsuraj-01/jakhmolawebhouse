@@ -247,6 +247,7 @@
     max-width: 500px; /* Maximum size for larger screens */
     height: auto; /* Height is set to auto to maintain aspect ratio */
     margin: 0 auto;
+    animation: subtle-move 3.5s ease-in-out forwards; /* Subtle movement animation for the image */
 }
 
 .circle-image-container img {
@@ -256,6 +257,7 @@
     object-fit: cover;
     position: relative;
     z-index: 1;
+    animation: subtle-move 3.5s ease-in-out forwards; /* Same animation for moving the image */
 }
 
 /* Icon styles */
@@ -267,6 +269,8 @@
     border-radius: 50%;
     padding: 10px;
     z-index: 2;
+    animation: move-and-return 3s linear forwards; /* Animation for moving icons around the border and returning */
+    transform-origin: center; /* Center the animation around the center of the image */
 }
 
 /* Icon-specific colors */
@@ -280,10 +284,30 @@
 /* Positioning icons around the image in a circular pattern */
 .icon-1 { top: 12px; left: 22%; transform: translateX(-50%); }
 .icon-2 { top: 50%; right: -20px; transform: translateY(-50%); }
-.icon-3 { top: 82%; right: 30px; transform: translateX(-50%); }
+.icon-3 { top: 82%; right: 50px; transform: translateX(-50%); }
 .icon-4 { top: 50%; left: -20px; transform: translateY(-50%); }
 .icon-5 { top: 10%; left: 80%; transform: translate(-50%, -50%); }
 .icon-6 { top: 90%; left: 18%; transform: translate(-50%, -50%); }
+
+/* Keyframes for circular movement and returning to exact positions */
+@keyframes move-and-return {
+    0% { transform: translate(0, 0); }
+    25% { transform: rotate(90deg) translate(150px) rotate(-90deg); }
+    50% { transform: rotate(180deg) translate(150px) rotate(-180deg); }
+    75% { transform: rotate(270deg) translate(150px) rotate(-270deg); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Keyframes for subtle image movement */
+@keyframes subtle-move {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(5px, -5px); } /* Slight shift to the right and up */
+    50% { transform: translate(-5px, 5px); } /* Slight shift to the left and down */
+    75% { transform: translate(5px, 5px); } /* Slight shift to the right and down */
+    100% { transform: translate(0, 0); } /* Back to original position */
+}
+
+
 
 /* Service Card Styling */
 .service-card {
