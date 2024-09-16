@@ -654,3 +654,19 @@
 .testimonial-carousel .owl-dot.active::after {
     background: var(--primary);
 }
+
+
+/* Smartphones and Tablets */
+@media (max-width: 991.98px) {
+    /* owl dots */
+    .testimonial-carousel .owl-dots {
+        display: flex!important;
+    }
+}
+
+/* Desktops Only */
+@media (min-width: 992px) {
+   
+}
+
+
