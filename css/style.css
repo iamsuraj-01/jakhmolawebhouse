@@ -544,9 +544,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    clip-path: polygon(0 0, 100% 0, 70% 70%, 30% 70%);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 15px 15px 0 0;
   }
   
   .team-img {
@@ -772,6 +770,38 @@
 .testimonial-carousel .owl-dot.active::after {
     background: var(--primary);
 }
+
+.facts .overlay {
+    /* Ensures readability over varied background images */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.facts .text-primary {
+    color: #007bff; /* Bootstrap primary color; adjust as needed */
+}
+
+.facts .fw-bold {
+    font-weight: bold;
+}
+
+.facts .fa-3x {
+    font-size: 3rem; /* Larger icons */
+}
+
+.facts .mb-2, .mb-4 {
+    margin-bottom: 0.5rem; /* 0.5rem for mb-2, 1.5rem for mb-4 */
+}
+
+.facts .h2 {
+    font-size: 2.25rem; /* Ensure large, readable numbers */
+    color: #fff; /* White text for visibility */
+}
+
+.facts .p {
+    font-size: 1rem;
+    color: #ccc; /* Lighter text for subtle details */
+}
+
 
 
 /* Smartphones and Tablets */
