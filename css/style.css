@@ -505,16 +505,6 @@
     position: relative;
 }
 
-.portfolio-bg-1 {
-    background-color: #fff802;
-}
-.portfolio-bg-2 {
-    background-color: #fff; 
-}
-.portfolio-bg-3 {
-    background-color: black;
-}
-
 .portfolio-btn {
     position: absolute;
     width: 100%;
