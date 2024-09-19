@@ -876,8 +876,8 @@
 }
 /* CSS for the Timeline Image */
 .timeline-image {
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     margin-bottom: 20px;
 }
@@ -885,7 +885,7 @@
     content: "";
     width: 7px;
     height: 100%;
-    background: #909090;
+    background: var(--secondary);
     position: absolute;
     top: 0;
     left: 50%;
@@ -911,14 +911,14 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #909090;
+    background: var(--primary);
     border: 7px solid #fff;
     left: -15px;
 }
 
 .main-timeline11 .timeline:after {
     display: block;
-    border-right: 30px solid #ee4423;
+    border-right: 30px solid var(--primary);
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
     left: 24px
@@ -928,7 +928,7 @@
     display: block;
     padding: 25px;
     border-radius: 100px;
-    background: #ee4423;
+    background: var(--primary);
     position: relative
 }
 
@@ -945,12 +945,12 @@
 }
 
 .main-timeline11 .inner-content {
-    width: 80%;
+    width: 84%;
     float: right;
     padding: 15px 20px 15px 15px;
-    background: #fff;
+    background: black;
     border-radius: 0 100px 100px 0;
-    color: #ee4423
+    color: var(--primary)
 }
 
 .main-timeline11 .year {
@@ -968,7 +968,8 @@
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
-    margin: 0 0 5px
+    margin: 0 0 5px;
+    color: white;
 }
 
 .main-timeline11 .description {
@@ -992,16 +993,28 @@
 
 .main-timeline11 .timeline:nth-child(2n):after {
     border-right: none;
-    border-left: 30px solid #ee4423;
+    border-left: 30px solid var(--secondary);
     left: auto;
     right: 24px;
-    border-left-color: #f68829
+    border-left-color: var(--secondary)
 }
 
 .main-timeline11 .timeline:nth-child(2n) .inner-content {
     float: none;
     border-radius: 100px 0 0 100px;
-    text-align: right
+}
+
+.main-timeline11 .timeline .inner-content {
+    text-align: left;
+}
+.main-timeline11 .timeline:nth-child(2n) .inner-content {
+    text-align: right;
+}
+.main-timeline11 .timeline:nth-child(3n) .inner-content {
+    text-align: left;
+}
+.main-timeline11 .timeline:nth-child(4n) .inner-content {
+    text-align: right;
 }
 
 .main-timeline11 .timeline:nth-child(2) {
@@ -1022,51 +1035,38 @@
 }
 
 .main-timeline11 .timeline:nth-child(2n) .timeline-content {
-    background: #f68829
+    background: var(--secondary)
 }
 
 .main-timeline11 .timeline:nth-child(2n),
 .main-timeline11 .timeline:nth-child(2n) .inner-content {
-    color: #f68829
+    color: var(--secondary)
 }
 
 .main-timeline11 .timeline:nth-child(3n) .timeline-content {
-    background: #2991d0
+    background: var(--primary)
 }
 
 .main-timeline11 .timeline:nth-child(3n),
 .main-timeline11 .timeline:nth-child(3n) .inner-content {
-    color: #2991d0
+    color: var(--primary)
 }
 
 .main-timeline11 .timeline:nth-child(3n):after {
-    border-right-color: #2991d0
+    border-right-color: var(--primary)
 }
 
 .main-timeline11 .timeline:nth-child(4n) .timeline-content {
-    background: #9361aa
+    background: var(--secondary)
 }
 
 .main-timeline11 .timeline:nth-child(4n),
 .main-timeline11 .timeline:nth-child(4n) .inner-content {
-    color: #9361aa
+    color: var(--secondary)
 }
 
 .main-timeline11 .timeline:nth-child(4n):after {
-    border-left-color: #9361aa
-}
-
-.main-timeline11 .timeline:nth-child(5n) .timeline-content {
-    background: #a7be26
-}
-
-.main-timeline11 .timeline:nth-child(5n),
-.main-timeline11 .timeline:nth-child(5n) .inner-content {
-    color: #a7be26
-}
-
-.main-timeline11 .timeline:nth-child(5n):after {
-    border-right-color: #a7be26
+    border-left-color: var(--secondary)
 }
 
 @media only screen and (max-width:1200px) {
@@ -1106,10 +1106,10 @@
 
     .main-timeline11 .timeline:nth-child(2n):after {
         border-left: none;
-        border-right: 30px solid #ee4423;
+        border-right: 30px solid var(--secondary);
         right: auto;
         left: 24px;
-        border-right-color: #f68829
+        border-right-color: var(--secondary);
     }
 
     .main-timeline11 .timeline,
@@ -1149,16 +1149,13 @@
     }
 
     .main-timeline11 .timeline:nth-child(3n):after {
-        border-left-color: #2991d0
+        border-left-color: var(--primary)
     }
 
     .main-timeline11 .timeline:nth-child(4n):after {
-        border-right-color: #9361aa
+        border-right-color: var(--secondary)
     }
 
-    .main-timeline11 .timeline:nth-child(5n):after {
-        border-left-color: #a7be26
-    }
 }
 
 @media only screen and (max-width:479px) {
@@ -1174,8 +1171,6 @@
         font-size: 30px
     }
 }
-
-
 
 /* Smartphones and Tablets */
 @media (max-width: 991.98px) {
