@@ -1182,42 +1182,6 @@
     }
 }
 
-        /* Finance section custom styles */
-        .finance-image-container {
-            border: 4px solid #008080;
-            padding: 10px;
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .finance-hover-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0.7);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .finance-image-container:hover .finance-hover-overlay {
-            opacity: 1;
-        }
-
-        .finance-hover-overlay h3 {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .finance-hover-overlay p {
-            font-size: 18px;
-        }
-
 
 /* Finance card container styles */
 #financeService .finance-card {
