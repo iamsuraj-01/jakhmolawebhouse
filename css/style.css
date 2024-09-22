@@ -486,13 +486,23 @@
 
 
 /*** Project Portfolio ***/
+
+#portfolio-flters {
+    background: var(--secondary);
+    padding: 10px;
+    border-radius: 50px;
+}
+
 #portfolio-flters li {
     display: inline-block;
     font-weight: 500;
     color: var(--dark);
     cursor: pointer;
     transition: .5s;
-    border-bottom: 2px solid transparent;
+    border: 2px solid transparent;
+    padding: 10px;
+    color: white;
+    border-radius: 50px;
 }
 
 #portfolio-flters li:hover,
