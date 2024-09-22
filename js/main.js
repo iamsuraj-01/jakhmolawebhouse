@@ -148,5 +148,7 @@ if ($('.typed-text-output').length == 1) {
         owl.trigger('to.owl.carousel', [index, 300]); // Go to the corresponding testimonial
     });
 
+    
+
 
 })(jQuery);
