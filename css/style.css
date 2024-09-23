@@ -1208,6 +1208,50 @@
     }
 }
 
+.accordion-button:not(.collapsed) {
+    color: var(--light);
+    background-color: var(--secondary);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+
+.accordion-button {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.marquee-wrapper {
+    overflow: hidden; /* Hide the overflow for the scrolling effect */
+    background-color: var(--primary); /* Background color for marquee area */
+    padding: 10px 0; /* Padding for the content */
+    border-radius: 5px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for better appearance */
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap; /* Prevent the text from breaking to the next line */
+    animation: scroll-left 40s linear infinite; /* Adjusted speed for faster appearance */
+}
+
+.marquee span {
+    display: inline-block;
+    padding: 0 100px; /* Add some space between items */
+    font-size: 16px; /* Adjust the font size */
+    color: var(--light);
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(50%); /* Start closer to the visible area */
+    }
+    100% {
+        transform: translateX(-100%); /* Scroll fully to the left */
+    }
+}
+
+
+
+
 
 /* Finance card container styles */
 #financeService .finance-card {
