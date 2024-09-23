@@ -32,7 +32,7 @@
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
 
 <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn">
+<nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
     <a href="index.html" class="navbar-brand d-block d-lg-none">
         <h1 class="text-primary fw-bold m-0">JWH</h1>
     </a>
@@ -41,17 +41,27 @@
     </button>
     <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="index.html" class="nav-item nav-link active">Home</a>
             <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="services.html" class="nav-item nav-link">Services</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class="dropdown-item" href="design-development.html">Design & Development</a></li>
+                    <li><a class="dropdown-item" href="seo-service.html">SEO</a></li>
+                    <li><a class="dropdown-item" href="internship.html">Internship</a></li>
+                    <li><a class="dropdown-item" href="branding.html">Branding</a></li>
+                    <li><a class="dropdown-item" href="social-media.html">Social Media</a></li>
+                    <li><a class="dropdown-item" href="finance.html">Finance</a></li>
+                </ul>
+            </div>
         </div>
         <a href="index.html" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
             <h1 class="text-primary fw-bold m-0">JWH</h1>
         </a>
         <div class="navbar-nav me-auto py-0">
-            <a href="internship.html" class="nav-item nav-link active">Internship</a>
-            <a href="courses.html" class="nav-item nav-link">Courses</a>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
+            <a href="https://jakhmolaweb.co.in/courses/" class="nav-item nav-link">Courses</a>
+            <a href="" class="nav-item nav-link">Gallery</a>
+            <a href="https://jakhmolaweb.co.in/contact/" class="nav-item nav-link">Contact</a>
         </div>
     </div>
 </nav>
