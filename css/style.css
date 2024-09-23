@@ -1250,7 +1250,31 @@
 }
 
 
+#internship-criteria {
+    padding: 50px 0;
+}
 
+#internship-criteria h3 {
+    color: #333;
+    font-weight: 700;
+}
+
+#internship-criteria ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+#internship-criteria ul li strong {
+    color: #333;
+}
+
+#internship-criteria img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
 
 /* Finance card container styles */
