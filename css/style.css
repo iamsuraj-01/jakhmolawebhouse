@@ -1,14 +1,14 @@
 /********** Template CSS **********/
 :root {
-    --primary: #6244C5;
+    --primary: #123e59;
     --secondary: #FFC448;
     --light: #FAFAFB;
     --dark: #12141D;
 }
 
 .bg-theme {
-    background-color: #6244C5;
-    color: #6244C5;
+    background-color: #123e59;
+    color: #123e59;
 }
 
 .bg-secondary-theme {
@@ -17,7 +17,7 @@
 }
 
 .text-theme {
-    color: #6244C5;
+    color: #123e59;
 }
 
 .text-secondary-theme {
@@ -71,6 +71,7 @@
 .btn.btn-primary,
 .btn.btn-secondary {
     color: #FFFFFF;
+    background-color: var(--primary);
 }
 
 .btn-square {
@@ -123,6 +124,27 @@
         padding: 10px 0;
     }
 }
+
+/* Adjust the image size and make it responsive */
+.logo-img {
+    width: 110px; /* Adjust the width to suit your needs */
+    height: auto; /* Keep aspect ratio */
+    max-width: 100%; /* Ensure it scales properly in smaller containers */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .logo-img {
+        width: 120px; /* Smaller size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-img {
+        width: 100px; /* Even smaller for mobile */
+    }
+}
+
 
 
 /*** Header ***/
@@ -343,7 +365,7 @@
 .circle-image-container .icon {
     position: absolute;
     font-size: 23px; /* Icon size */
-    color: #6244C5; /* Icon color */
+    color: #123e59; /* Icon color */
     background-color: white; /* Icon background */
     border-radius: 50%;
     padding: 10px;
@@ -525,7 +547,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(98, 68, 197, .9);
+    background: rgba(18, 62, 89, 0.9);
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -791,7 +813,7 @@
 }
 
 .facts .text-primary {
-    color: #007bff; /* Bootstrap primary color; adjust as needed */
+    color: var(--primary); /* Bootstrap primary color; adjust as needed */
 }
 
 .facts .fw-bold {
@@ -964,7 +986,7 @@
     padding: 15px 20px 15px 15px;
     background: black;
     border-radius: 0 100px 100px 0;
-    color: var(--primary)
+    color: var(--light)
 }
 
 .main-timeline11 .year {
@@ -988,7 +1010,7 @@
 
 .main-timeline11 .description {
     font-size: 14px;
-    margin: 0 0 5px
+    margin: 0 0 40px;
 }
 
 .main-timeline11 .timeline:nth-child(2n) {
@@ -1019,16 +1041,16 @@
 }
 
 .main-timeline11 .timeline .inner-content {
-    text-align: left;
+    text-align: justify;
 }
 .main-timeline11 .timeline:nth-child(2n) .inner-content {
-    text-align: right;
+    text-align: justify;
 }
 .main-timeline11 .timeline:nth-child(3n) .inner-content {
-    text-align: left;
+    text-align: justify;
 }
 .main-timeline11 .timeline:nth-child(4n) .inner-content {
-    text-align: right;
+    text-align: justify;
 }
 
 .main-timeline11 .timeline:nth-child(2) {
@@ -1054,7 +1076,7 @@
 
 .main-timeline11 .timeline:nth-child(2n),
 .main-timeline11 .timeline:nth-child(2n) .inner-content {
-    color: var(--secondary)
+    color: var(--light)
 }
 
 .main-timeline11 .timeline:nth-child(3n) .timeline-content {
@@ -1063,7 +1085,7 @@
 
 .main-timeline11 .timeline:nth-child(3n),
 .main-timeline11 .timeline:nth-child(3n) .inner-content {
-    color: var(--primary)
+    color: var(--light)
 }
 
 .main-timeline11 .timeline:nth-child(3n):after {
@@ -1076,7 +1098,7 @@
 
 .main-timeline11 .timeline:nth-child(4n),
 .main-timeline11 .timeline:nth-child(4n) .inner-content {
-    color: var(--secondary)
+    color: var(--light);
 }
 
 .main-timeline11 .timeline:nth-child(4n):after {
@@ -1262,6 +1284,106 @@
     opacity: 1; /* Fade in text smoothly */
 }
 
+.footer-section {
+    background-color: #233243; /* Yellow background */
+    color: var(--light);
+    padding: 50px 0;
+}
+
+.footer-section .site-logo img {
+    width: 200px; /* Fixed width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Make sure the image does not exceed its container */
+}
+
+@media (max-width: 768px) {
+    .footer-section .site-logo img {
+        width: 120px; /* Adjust width on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-section .site-logo img {
+        width: 100px; /* Further adjustment for very small screens */
+    }
+}
+
+
+.footer-top {
+    padding-bottom: 30px;
+}
+
+.widget-title {
+    font-size: 18px;
+    color: var(--light);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.widget p,
+.widget ul li {
+    color: var(--light);
+    font-size: 14px;
+}
+
+.widget ul {
+    padding: 0;
+    list-style: none;
+}
+
+.widget ul li {
+    margin-bottom: 10px;
+}
+
+.widget ul li a {
+    color: var(--light);
+    text-decoration: none;
+}
+
+.widget ul li a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    color: var(--light);
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-icons li a:hover {
+    color: var(--secondary);
+}
+
+.copy-right-text {
+    color: var(--light);
+    font-size: 14px;
+}
+
+.copy-right-text a {
+    color: var(--light);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.copy-right-text a:hover {
+    color: var(--secondary);
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #eeeeee;
+}
 
 
 
