@@ -323,19 +323,6 @@
     animation: subtle-move 3.5s ease-in-out forwards; /* Same animation for moving the image */
 }
 
-/* Icon styles */
-.circle-image-container .icon {
-    position: absolute;
-    font-size: 23px; /* Icon size */
-    color: #6244C5; /* Icon color */
-    background-color: white; /* Icon background */
-    border-radius: 50%;
-    padding: 10px;
-    z-index: 2;
-    animation: move-and-return 3s linear forwards; /* Animation for moving icons around the border and returning */
-    transform-origin: center; /* Center the animation around the center of the image */
-}
-
 /* Icon-specific colors */
 .icon-1 i { color: #1DA1F2; } /* Paper Plane - Twitter Blue */
 .icon-2 i { color: #4CAF50; } /* Globe - Green */
@@ -352,7 +339,20 @@
 .icon-5 { top: 10%; left: 80%; transform: translate(-50%, -50%); }
 .icon-6 { top: 83%; left: 11%; transform: translate(-50%, -50%); }
 
-/* Keyframes for circular movement and returning to exact positions */
+/* Icon styles */
+.circle-image-container .icon {
+    position: absolute;
+    font-size: 23px; /* Icon size */
+    color: #6244C5; /* Icon color */
+    background-color: white; /* Icon background */
+    border-radius: 50%;
+    padding: 10px;
+    z-index: 2;
+    animation: move-and-return 5s linear forwards; /* Changed from 3s to 5s */
+    transform-origin: center; /* Center the animation around the center of the image */
+}
+
+/* Increase the keyframe animation time for circular movement */
 @keyframes move-and-return {
     0% { transform: translate(0, 0); }
     25% { transform: rotate(90deg) translate(150px) rotate(-90deg); }
@@ -488,7 +488,6 @@
 /*** Project Portfolio ***/
 
 #portfolio-flters {
-    background: var(--secondary);
     padding: 10px;
     border-radius: 50px;
 }
@@ -496,19 +495,24 @@
 #portfolio-flters li {
     display: inline-block;
     font-weight: 500;
-    color: var(--dark);
+    color: var(--light);
     cursor: pointer;
     transition: .5s;
     border: 2px solid transparent;
     padding: 10px;
-    color: white;
     border-radius: 50px;
+    background-color: var(--primary);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #portfolio-flters li:hover,
 #portfolio-flters li.active {
-    color: var(--primary);
-    border-color: var(--primary);
+    background-color: var(--secondary);
+    color: var(--dark);
+    border-color: var(--secondary);
 }
 
 .portfolio-img {
