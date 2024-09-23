@@ -74,6 +74,10 @@
     background-color: var(--primary);
 }
 
+.btn-primary:hover {
+    background-color: #FFC448;
+}
+
 .btn-square {
     width: 38px;
     height: 38px;
@@ -1275,6 +1279,54 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.course-card {
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.course-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.course-card ul {
+    text-align: left;
+    margin: 20px 0;
+    font-size: 16px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.course-card ul li {
+    margin-bottom: 10px;
+}
+
+.course-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.course-card .btn-primary {
+    background-color: var(--primary);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.course-card .btn-primary:hover {
+    background-color: #FFC448;
+}
+
 
 
 /* Finance card container styles */
