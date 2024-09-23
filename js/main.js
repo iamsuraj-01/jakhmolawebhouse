@@ -57,12 +57,12 @@ if ($('.typed-text-output').length == 1) {
     // Extract text and icon data
     var typed_strings = $('.typed-text').text().split(', ');
     var icon_classes = [
-        'fas fa-code',              // Web Development
-        'fas fa-bullhorn',          // Digital Marketing
-        'fas fa-user-graduate',     // Internship Program
-        'fas fa-bullseye',          // Branding Promotion
-        'fas fa-share-alt',         // Social Media Marketing
-        'fas fa-store'              // Local Business Building
+        'fas fa-code',
+        'fas fa-bullhorn',
+        'fas fa-user-graduate',
+        'fas fa-bullseye',
+        'fas fa-share-alt',
+        'fas fa-wallet'
     ];    
 
     // Combine text and icons into HTML strings with inline styles
