@@ -368,7 +368,7 @@
 /* Icon styles */
 .circle-image-container .icon {
     position: absolute;
-    font-size: 23px; /* Icon size */
+    font-size: 20px; /* Icon size */
     color: #123e59; /* Icon color */
     background-color: white; /* Icon background */
     border-radius: 50%;
@@ -412,6 +412,36 @@
     transform: scale(1.5); /* Zoom effect for content icons */
 }
 
+/* Mobile-specific adjustments for the icons and text */
+@media (max-width: 768px) {
+    .circle-image-container .icon {
+        font-size: 15px;
+    }
+    .icon-1 {
+        top: 30px;
+        left: 7%;
+    }
+    .icon-3 {
+        top: 82%;
+        right: 40px;
+    }
+    .mobile-responsive-section .col-6 p {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Adjust spacing between the icon and the text */
+    }
+
+    .mobile-responsive-section .col-6 i {
+        font-size: 20px; /* Slightly smaller icon size for mobile */
+        width: 30px; /* Consistent width for icon container */
+        text-align: center; /* Center-align icons */
+    }
+
+    .mobile-responsive-section .col-6 p {
+        font-size: 14px; /* Adjust text size for smaller screens */
+    }
+}
+
 
 
 /* Service Card Styling */
@@ -430,72 +460,98 @@
     transition: transform 0.3s ease;
 }
 
-/* Always Visible Overlay with Icon and Service Name */
+/* Overlay with Icon and Title */
 .service-card .overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    transition: opacity 0.3s ease; /* Smooth transition for hiding */
+    transition: opacity 0.3s ease;
+}
+
+.service-card .overlay i {
+    font-size: 40px;
+    color: yellow; /* Yellow icon color */
 }
 
 .service-card .overlay h4 {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
 }
 
-/* Hidden Content for Hover Effect */
+/* Hidden Hover Content */
 .service-card .hover-content {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -100%; /* Start the hover content below the card */
-    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
-    transition: bottom 0.3s ease; /* Slide in effect */
+    bottom: -100%; /* Initially hidden */
+    background: rgba(0, 0, 0, 0.7);
+    transition: bottom 0.3s ease;
     z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 30px;
-    border-top-left-radius: 100% 30px; /* Curved top left corner */
-    border-top-right-radius: 100% 30px; /* Curved top right corner */
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-/* Hover Effect for Service Card */
+.service-card .hover-content p {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: justify; /* Justify the text */
+}
+
+.service-card .hover-content .btn {
+    padding: 10px 20px;
+}
+
+/* Hover Effect - Show Hover Content */
 .service-card:hover .hover-content {
-    bottom: 0; /* Slide the content up to cover the card */
+    bottom: 0; /* Show hover content */
 }
 
-/* Hide Icon and Heading on Hover */
 .service-card:hover .overlay i,
 .service-card:hover .overlay h4 {
-    opacity: 0; /* Make icon and heading invisible */
-    transition: opacity 0.3s ease; /* Smooth transition */
+    opacity: 0; /* Hide icon and title */
 }
 
-/* Icon at the Top Center */
-.overlay i {
-    margin-bottom: 10px;
-    font-size: 40px;
-}
-
-/* Additional Styling for Text */
-.overlay h4 {
-    transition: transform 0.3s ease;
-    z-index: 3;
-}
-
+/* Zoom Image on Hover */
 .service-card:hover img {
-    transform: scale(1.1); /* Zoom in the image */
+    transform: scale(1.1); /* Slight zoom */
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .service-card .overlay h4 {
+        font-size: 1.2rem;
+    }
+
+    .service-card .hover-content {
+        padding: 15px;
+    }
+
+    .service-card:hover img {
+        transform: none; /* Disable zoom on mobile */
+    }
+}
+
+
+
+
+
+
 
 
 /*** Service Orignal 
@@ -528,10 +584,6 @@
     padding: 10px;
     border-radius: 50px;
     background-color: var(--primary);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 #portfolio-flters li:hover,
@@ -565,6 +617,14 @@
     opacity: 1;
     padding-bottom: 30px !important;
 }
+
+@media (max-width: 768px) {
+    #portfolio-flters li {
+        font-size: x-small;
+    }
+}
+
+
 
 /*** Team ***/
 .team-card {
