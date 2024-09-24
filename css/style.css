@@ -1466,6 +1466,7 @@
     opacity: 1; /* Fade in text smoothly */
 }
 
+/* footer */
 .footer-section {
     background-color: #233243; /* Yellow background */
     color: var(--light);
@@ -1473,7 +1474,7 @@
 }
 
 .footer-section .site-logo img {
-    width: 200px; /* Fixed width */
+    width: 150px; /* Fixed width */
     height: auto; /* Maintain aspect ratio */
     max-width: 100%; /* Make sure the image does not exceed its container */
 }
@@ -1490,82 +1491,82 @@
     }
 }
 
-
-.footer-top {
+.footer-section .footer-top {
     padding-bottom: 30px;
 }
 
-.widget-title {
+.footer-section .widget-title {
     font-size: 18px;
     color: var(--light);
     margin-bottom: 20px;
     font-weight: bold;
 }
 
-.widget p,
-.widget ul li {
+.footer-section .widget p,
+.footer-section .widget ul li {
     color: var(--light);
     font-size: 14px;
 }
 
-.widget ul {
+.footer-section .widget ul {
     padding: 0;
     list-style: none;
 }
 
-.widget ul li {
+.footer-section .widget ul li {
     margin-bottom: 10px;
 }
 
-.widget ul li a {
+.footer-section .widget ul li a {
     color: var(--light);
     text-decoration: none;
 }
 
-.widget ul li a:hover {
+.footer-section .widget ul li a:hover {
     color: var(--secondary);
     text-decoration: underline;
 }
 
-.social-icons {
+.footer-section .social-icons {
     list-style: none;
     padding: 0;
 }
 
-.social-icons li {
+.footer-section .social-icons li {
     display: inline-block;
     margin-right: 10px;
 }
 
-.social-icons li a {
+.footer-section .social-icons li a {
     color: var(--light);
     font-size: 16px;
     transition: color 0.3s;
 }
 
-.social-icons li a:hover {
+.footer-section .social-icons li a:hover {
     color: var(--secondary);
 }
 
-.copy-right-text {
+.footer-section .copy-right-text {
     color: var(--light);
     font-size: 14px;
 }
 
-.copy-right-text a {
+.footer-section .copy-right-text a {
     color: var(--light);
     font-weight: bold;
     text-decoration: none;
 }
 
-.copy-right-text a:hover {
+.footer-section .copy-right-text a:hover {
     color: var(--secondary);
 }
 
-.footer-bottom {
+.footer-section .footer-bottom {
     padding-top: 20px;
     border-top: 1px solid #eeeeee;
 }
+
 
 
 
