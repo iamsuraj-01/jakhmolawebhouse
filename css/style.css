@@ -568,7 +568,6 @@
 /*** Project Portfolio ***/
 
 #portfolio-flters {
-   
     border-radius: 50px;
 }
 
@@ -580,7 +579,7 @@
     cursor: pointer;
     transition: .5s;
     border: 2px solid transparent;
-    padding: 20px;
+    padding: 15px;
     border-radius: 50px;
     background-color: var(--primary);
 }
