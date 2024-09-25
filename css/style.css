@@ -149,13 +149,7 @@
     }
 }
 
-
-
 /*** Header ***/
-#home {
-    margin-bottom: 6rem;
-}
-
 .typed-cursor {
     font-size: 30px;
 }
@@ -317,18 +311,20 @@
 
 
 /*** About ***/
+#about .years {
+    margin-right: 1.5rem;
+}
 #about .years .display-1 {
     font-size: 10rem;
     line-height: 9rem;
 }
-
 #about .years h5 {
     letter-spacing: 30px;
     margin-right: -30px;
 }
 
 /* Circle image container */
-.circle-image-container {
+#about .circle-image-container {
     position: relative;
     width: 100%; /* Set width to 100% for responsiveness */
     max-width: 500px; /* Maximum size for larger screens */
@@ -337,7 +333,7 @@
     animation: subtle-move 3.5s ease-in-out forwards; /* Subtle movement animation for the image */
 }
 
-.circle-image-container img {
+#about .circle-image-container img {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
@@ -348,23 +344,23 @@
 }
 
 /* Icon-specific colors */
-.icon-1 i { color: #1DA1F2; } /* Paper Plane - Twitter Blue */
-.icon-2 i { color: #4CAF50; } /* Globe - Green */
-.icon-3 i { color: #FF5722; } /* Envelope - Orange */
-.icon-4 i { color: #3b5998; } /* Thumbs Up - Facebook Blue */
-.icon-5 i { color: #FF0000; } /* Heart - Red */
-.icon-6 i { color: #8A2BE2; } /* Home - Purple */
+#about .icon-1 i { color: #1DA1F2; } /* Paper Plane - Twitter Blue */
+#about .icon-2 i { color: #4CAF50; } /* Globe - Green */
+#about .icon-3 i { color: #FF5722; } /* Envelope - Orange */
+#about .icon-4 i { color: #3b5998; } /* Thumbs Up - Facebook Blue */
+#about .icon-5 i { color: #FF0000; } /* Heart - Red */
+#about .icon-6 i { color: #8A2BE2; } /* Home - Purple */
 
 /* Positioning icons around the image in a circular pattern */
-.icon-1 { top: 38px; left: 10%; transform: translateX(-50%); }
-.icon-2 { top: 50%; right: -20px; transform: translateY(-50%); }
-.icon-3 { top: 82%; right: 50px; transform: translateX(-50%); }
-.icon-4 { top: 50%; left: -20px; transform: translateY(-50%); }
-.icon-5 { top: 10%; left: 80%; transform: translate(-50%, -50%); }
-.icon-6 { top: 83%; left: 11%; transform: translate(-50%, -50%); }
+#about .icon-1 { top: 38px; left: 10%; transform: translateX(-50%); }
+#about .icon-2 { top: 50%; right: -20px; transform: translateY(-50%); }
+#about .icon-3 { top: 82%; right: 50px; transform: translateX(-50%); }
+#about .icon-4 { top: 50%; left: -20px; transform: translateY(-50%); }
+#about .icon-5 { top: 10%; left: 80%; transform: translate(-50%, -50%); }
+#about .icon-6 { top: 83%; left: 11%; transform: translate(-50%, -50%); }
 
 /* Icon styles */
-.circle-image-container .icon {
+#about .circle-image-container .icon {
     position: absolute;
     font-size: 20px; /* Icon size */
     color: #123e59; /* Icon color */
@@ -385,6 +381,18 @@
     100% { transform: translate(0, 0); }
 }
 
+/* Media query for mobile view (adjust max-width for different screen sizes) */
+@media (max-width: 767px) {
+    /* Minimal movement of icons for mobile view */
+    @keyframes move-and-return {
+        0% { transform: translate(0, 0); }
+        25% { transform: rotate(90deg) translate(10px) rotate(-90deg); } /* Reduced from 15px to 10px */
+        50% { transform: rotate(180deg) translate(10px) rotate(-180deg); } /* Reduced from 15px to 10px */
+        75% { transform: rotate(270deg) translate(10px) rotate(-270deg); } /* Reduced from 15px to 10px */
+        100% { transform: translate(0, 0); }
+    }
+}
+
 /* Keyframes for subtle image movement */
 @keyframes subtle-move {
     0% { transform: translate(0, 0); }
@@ -395,47 +403,60 @@
 }
 
 /* Apply a smooth transition to all icons */
-.circle-image-container .icon i,
+#about .circle-image-container .icon i,
 .icon-hover i {
     transition: transform 0.3s ease; /* Smooth transition */
 }
 
 /* Zoom effect on hover for image icons */
-.circle-image-container .icon:hover i {
+#about .circle-image-container .icon:hover i {
     transform: scale(1.5); /* Zoom effect for image icons */
 }
 
 /* Zoom effect on hover for content icons */
-.icon-hover:hover i {
+#about .icon-hover:hover i {
     transform: scale(1.5); /* Zoom effect for content icons */
 }
 
 /* Mobile-specific adjustments for the icons and text */
 @media (max-width: 768px) {
-    .circle-image-container .icon {
+    #about .years {
+        margin-right: 1.5rem;
+    }
+    #about .years .display-1 {
+        font-size: 7rem;
+        line-height: 6rem;
+    }
+    #about .years h5 {
+        letter-spacing: 13px;
+    }
+    #about .lh-base {
+        font-size: 16px;
+    }
+    #about .circle-image-container .icon {
         font-size: 15px;
     }
-    .icon-1 {
+    #about .icon-1 {
         top: 30px;
         left: 7%;
     }
-    .icon-3 {
+    #about .icon-3 {
         top: 82%;
         right: 40px;
     }
-    .mobile-responsive-section .col-6 p {
+    #about .mobile-responsive-section .col-6 p {
         display: flex;
         align-items: center;
         gap: 10px; /* Adjust spacing between the icon and the text */
     }
 
-    .mobile-responsive-section .col-6 i {
+    #about .mobile-responsive-section .col-6 i {
         font-size: 20px; /* Slightly smaller icon size for mobile */
         width: 30px; /* Consistent width for icon container */
         text-align: center; /* Center-align icons */
     }
 
-    .mobile-responsive-section .col-6 p {
+    #about .mobile-responsive-section .col-6 p {
         font-size: 14px; /* Adjust text size for smaller screens */
     }
 }
@@ -867,6 +888,32 @@
 .testimonial-carousel .owl-dot.active::after {
     background: var(--primary);
 }
+
+/* Contact Section Styling */
+#contact h3 {
+    font-size: 1.3rem; /* Increase font size for headings */
+    font-weight: bold;  /* Bold for headings */
+    color: #333;        /* Darker color for better readability */
+}
+
+#contact p {
+    font-size: 1.1rem;  /* Smaller font size for sub-content */
+    color: #555;         /* Lighter color for sub-content */
+}
+
+#contact hr {
+    margin: 10px 0; /* Adjust space between content and dividers */
+}
+
+#contact .btn-square {
+    width: 40px;    /* Size of social media icons */
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
 
 .facts .overlay {
     /* Ensures readability over varied background images */
