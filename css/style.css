@@ -1145,7 +1145,7 @@
 }
 
 .main-timeline11 .inner-content {
-    width: 84%;
+    width: 86%;
     float: right;
     padding: 15px 20px 15px 15px;
     background: black;
@@ -1160,7 +1160,7 @@
     color: #fff;
     position: absolute;
     top: 50%;
-    left: 7%;
+    left: 4%;
     transform: translateY(-50%)
 }
 
@@ -1188,7 +1188,7 @@
 }
 
 .main-timeline11 .timeline:nth-child(2n) .year {
-    right: 7%
+    right: 4%
 }
 
 .main-timeline11 .timeline:nth-child(2n):after {
