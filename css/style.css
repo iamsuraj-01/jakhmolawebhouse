@@ -942,37 +942,65 @@
 }
 
 
+/* Facts Counter Section Styling */
+.facts {
+    position: relative;
+    z-index: 1;
+}
 
+/* Overlay for background readability over the image */
 .facts .overlay {
-    /* Ensures readability over varied background images */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for better text contrast */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keep it behind the text */
 }
 
+/* Container for the parallax effect */
+.facts .container-fluid {
+    background-attachment: fixed; /* Parallax effect */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Icon Styling */
 .facts .text-primary {
-    color: var(--primary); /* Bootstrap primary color; adjust as needed */
-}
-
-.facts .fw-bold {
-    font-weight: bold;
+    color: var(--primary); /* Primary color for icons */
 }
 
 .facts .fa-3x {
-    font-size: 3rem; /* Larger icons */
+    font-size: 3rem; /* Large icons */
 }
 
-.facts .mb-2, .mb-4 {
-    margin-bottom: 0.5rem; /* 0.5rem for mb-2, 1.5rem for mb-4 */
+/* Margin Adjustments */
+.facts .mb-2 {
+    margin-bottom: 0.5rem; /* Small bottom margin for icons */
 }
 
-.facts .h2 {
-    font-size: 2.25rem; /* Ensure large, readable numbers */
-    color: #fff; /* White text for visibility */
+.facts .mb-4 {
+    margin-bottom: 1.5rem; /* Larger bottom margin for sections */
 }
 
-.facts .p {
-    font-size: 1rem;
-    color: #ccc; /* Lighter text for subtle details */
+/* Text and Heading Styling */
+.facts .fw-bold {
+    font-weight: bold; /* Bold numbers */
 }
+
+.facts h2 {
+    font-size: 2.25rem; /* Large font for numbers */
+    color: #fff; /* White numbers for readability over dark background */
+}
+
+.facts p {
+    font-size: 1rem; /* Smaller font for text */
+    color: #ccc; /* Light grey text for a subtle effect */
+}
+
 
 .overview-seo .card:hover {
     background: black;
