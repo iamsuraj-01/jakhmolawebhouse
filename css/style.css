@@ -569,6 +569,7 @@
 
 #portfolio-flters {
     border-radius: 50px;
+    background-color: var(--primary);
 }
 
 #portfolio-flters li {
@@ -581,14 +582,11 @@
     border: 2px solid transparent;
     padding: 15px;
     border-radius: 50px;
-    background-color: var(--primary);
 }
 
 #portfolio-flters li:hover,
 #portfolio-flters li.active {
-    background-color: var(--secondary);
-    color: var(--dark);
-    border-color: var(--secondary);
+    color: var(--secondary);
 }
 
 .portfolio-img {
