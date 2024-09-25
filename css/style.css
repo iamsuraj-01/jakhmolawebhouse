@@ -640,9 +640,7 @@
         font-size: 12px;
         padding: 10px;
     }
-}
 
-@media (max-width: 768px) {
     /* For smaller screens, set two columns per row */
     .portfolio-item {
         flex: 0 0 50%; /* Take up 50% of the width (two columns per row) */
