@@ -642,6 +642,36 @@
     }
 }
 
+@media (max-width: 768px) {
+    /* For smaller screens, set two columns per row */
+    .portfolio-item {
+        flex: 0 0 50%; /* Take up 50% of the width (two columns per row) */
+        max-width: 50%; /* Ensure max width is 50% */
+    }
+
+    /* Adjust the size of the images */
+    .portfolio-img img {
+        width: 100%;  /* Make sure images take up the full width of their container */
+        height: auto;  /* Maintain aspect ratio */
+    }
+
+    /* Adjust padding and margins for better fit on mobile */
+    .portfolio-container {
+        gap: 15px; /* Reduce the space between cards */
+    }
+
+    .portfolio-item .portfolio-btn {
+        padding: 10px; /* Adjust button padding for smaller screens */
+    }
+
+    .portfolio-item .btn-lg-square {
+        width: 30px;
+        height: 30px; /* Make buttons smaller */
+        font-size: 14px; /* Adjust icon size */
+    }
+}
+
+
 
 
 /*** Team ***/
