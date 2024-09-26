@@ -69,25 +69,29 @@
     </nav>
     <!-- Navbar End -->
 
-    <!-- Hero Section Start -->
-    <div class="container-fluid py-6 position-relative" id="course-hero" style="background: url('img/banner.jpg') center center/cover no-repeat;">
-        <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.7);"></div>
-        <div class="container text-center py-6 position-relative">
-            <h1 class="display-4 text-white mb-3 wow fadeIn" data-wow-delay="0.1s">
-                <span class="text-secondary-theme">O</span>ur<span class="text-secondary-theme"> C</span>ourses
-            </h1>
-            <p class="lead text-white wow fadeIn" data-wow-delay="0.3s">
-                Learn from the best and develop industry-relevant skills in web development, digital marketing, and more.
-            </p>
-        </div>
+   <!-- Hero Section Start -->
+<div class="container-fluid py-6 position-relative" id="course-hero" style="background: url('img/banner.jpg') center center/cover no-repeat;">
+    <!-- Overlay -->
+    <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.7);"></div>
+    
+    <!-- Content -->
+    <div class="container text-center py-6 position-relative">
+        <h1 class="display-4 text-white mb-3 wow fadeIn" data-wow-delay="0.1s">
+            <span class="text-secondary-theme">O</span>ur<span class="text-secondary-theme"> C</span>ourses
+        </h1>
+        <p class="lead text-white wow fadeIn" data-wow-delay="0.3s">
+            Learn from the best and develop industry-relevant skills in web development, digital marketing, and more.
+        </p>
     </div>
-    <!-- Hero Section End -->
+</div>
+<!-- Hero Section End -->
+
 
 <!-- Course Plans Section Start -->
 <div class="container-xxl py-6">
     <div class="container">
         <div class="row g-5 mb-5">
-            <div class="col-lg-12">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="display-5 mb-2 text-center">
                     <span class="text-secondary-theme">Professional</span><span class="text-theme"> Courses</span>
                 </h1>
@@ -97,7 +101,7 @@
 
         <div class="row justify-content-center">
             <!-- Course 1: Web Design -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInLeft" data-wow-delay="0.2s">
                 <div class="course-card shadow-lg rounded overflow-hidden position-relative">
                     <!-- Image -->
                     <img src="img/page-web-development.jpg" class="img-fluid w-100" alt="Web Design">
@@ -119,7 +123,7 @@
             </div>
 
             <!-- Course 2: Digital Marketing -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="course-card shadow-lg rounded overflow-hidden position-relative">
                     <!-- Image -->
                     <img src="img/page-digital-marketing.jpg" class="img-fluid w-100" alt="Digital Marketing">
@@ -141,7 +145,7 @@
             </div>
 
             <!-- Course 3: Internship Program -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInRight" data-wow-delay="0.6s">
                 <div class="course-card shadow-lg rounded overflow-hidden position-relative">
                     <!-- Image -->
                     <img src="img/page-internship-program.jpg" class="img-fluid w-100" alt="Internship Program">
@@ -163,9 +167,9 @@
             </div>
         </div>
 
-       <!-- Enroll Now Button at the Bottom -->
+        <!-- Enroll Now Button at the Bottom -->
         <div class="row d-flex justify-content-center align-items-center mt-5">
-            <div class="col-12 col-md-3 text-center">
+            <div class="col-12 col-md-3 text-center wow fadeInUp" data-wow-delay="0.8s">
                 <button class="btn btn-primary btn-lg w-100" data-bs-toggle="modal" data-bs-target="#enrollModal">
                     Enroll Now
                 </button>
@@ -178,7 +182,7 @@
 
 <!-- Enrollment Modal Start -->
 <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog wow fadeInUp" data-wow-delay="0.5s">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="enrollModalLabel">Enroll in Course</h5>
@@ -227,7 +231,7 @@
   
   <!-- Thank You Modal -->
   <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered wow fadeInUp" data-wow-delay="0.2s">
       <div class="modal-content">
         <div class="modal-body text-dark">
           Thank you for your enrollment. We will contact you soon with further details regarding the <strong><span id="selectedCourse"></span></strong> course. We look forward to helping you enhance your skills!
@@ -238,6 +242,8 @@
       </div>
     </div>
   </div>
+  <!-- Thank You Modal End -->
+
 
 
 <footer class="footer-section">
