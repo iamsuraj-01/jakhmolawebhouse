@@ -1495,6 +1495,14 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.review {
+    margin-bottom: 20px; /* Adjust space between reviews */
+}
+
+.star-rating i {
+    color: var(--secondary); /* Change star color if needed */
+}
+
 /* Course card styling */
 .course-card {
     background-color: #fff;
