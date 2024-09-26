@@ -148,7 +148,47 @@ if ($('.typed-text-output').length == 1) {
         owl.trigger('to.owl.carousel', [index, 300]); // Go to the corresponding testimonial
     });
 
-    
 
+    $(document).ready(function() {
+        $("#enrollForm").on("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            const fullName = $("input[name='name']").val();
+            const email = $("input[name='email']").val();
+            const phone = $("input[name='phone']").val();
+            const course = $("select[name='course']").val();
+    
+            // Create an array for the message lines
+            const messageLines = [
+                `Course Enrollment Request:`,
+                `Name:               ${fullName}`,
+                `Email:              ${email}`,
+                `Phone:              ${phone}`,
+                `Course:             ${course}`
+            ];
+    
+            // Join the message lines with line breaks
+            const message = messageLines.join('\n');
+    
+            // Detect if the user is on mobile or desktop
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const whatsappUrl = isMobile 
+                ? `https://wa.me/8477924401?text=${encodeURIComponent(message)}`  // Mobile link
+                : `https://web.whatsapp.com/send?phone=8477924401&text=${encodeURIComponent(message)}`; // WhatsApp Web link
+    
+            // Open WhatsApp link
+            window.open(whatsappUrl, '_blank');
+    
+            // Insert the selected course name in the thank you modal
+            $("#selectedCourse").text(course);
+    
+            // Close the enrollment modal
+            var enrollModal = bootstrap.Modal.getInstance(document.getElementById('enrollModal'));
+            enrollModal.hide();
+    
+            // Show the thank you modal after the enrollment modal is hidden
+            $('#thankYouModal').modal('show');
+        });
+    });
 
 })(jQuery);

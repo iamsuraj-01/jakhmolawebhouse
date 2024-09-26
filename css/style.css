@@ -1499,6 +1499,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Course card styling */
 .course-card {
     background-color: #fff;
     border-radius: 10px;
@@ -1510,6 +1511,26 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Full width image */
+.course-card img {
+    width: 100%;
+    height: auto;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Price tag styling */
+.price-tag {
+    font-size: 18px;
+    background-color: var(--primary);
+    color: white;
+    border-bottom-left-radius: 5px;
+    padding: 10px 20px;
+    top: 0;
+    right: 0;
+}
+
+/* Course content styling */
 .course-card h3 {
     font-size: 24px;
     font-weight: 600;
@@ -1528,12 +1549,6 @@
     margin-bottom: 10px;
 }
 
-.course-card h4 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
 .course-card .btn-primary {
     background-color: var(--primary);
     border: none;
@@ -1545,6 +1560,7 @@
 .course-card .btn-primary:hover {
     background-color: #FFC448;
 }
+
 
 
 
