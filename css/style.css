@@ -1444,7 +1444,7 @@
 
 .marquee-wrapper {
     overflow: hidden; /* Hide the overflow for the scrolling effect */
-    background-color: var(--primary); /* Background color for marquee area */
+    background-color: var(--secondary); /* Background color for marquee area */
     padding: 10px 0; /* Padding for the content */
     border-radius: 5px; /* Rounded edges */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for better appearance */
@@ -1460,7 +1460,7 @@
     display: inline-block;
     padding: 0 100px; /* Add some space between items */
     font-size: 16px; /* Adjust the font size */
-    color: var(--light);
+    color: var(--dark);
 }
 
 @keyframes scroll-left {
@@ -1472,10 +1472,6 @@
     }
 }
 
-
-#internship-criteria {
-    padding: 50px 0;
-}
 
 #internship-criteria h3 {
     color: #333;
@@ -1641,7 +1637,7 @@
 
 /* footer */
 .footer-section {
-    background-color: #233243; /* Yellow background */
+    background-color: var(--primary); /* Yellow background */
     color: var(--light);
     padding: 50px 0;
 }
