@@ -171,9 +171,10 @@
         <!-- Enroll Now Button at the Bottom -->
         <div class="row d-flex justify-content-center align-items-center mt-5">
             <div class="col-12 col-md-3 text-center wow fadeInUp" data-wow-delay="0.8s">
-                <button class="btn btn-primary btn-lg w-100" data-bs-toggle="modal" data-bs-target="#enrollModal">
-                    Enroll Now
+                <button class="btn btn-primary btn-lg py-3 px-5 w-100" data-bs-toggle="modal" data-bs-target="#enrollModal">
+                    <i class="fas fa-user-graduate me-2"></i> Enroll Now
                 </button>
+                
             </div>
         </div>
     </div>
@@ -184,66 +185,72 @@
 <!-- Enrollment Modal Start -->
 <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
     <div class="modal-dialog wow fadeInUp" data-wow-delay="0.5s">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="enrollModalLabel">Enroll in Course</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="enrollModalLabel">Enroll in Course</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Enrollment form fields -->
+                <form id="enrollForm">
+                    <!-- Name -->
+                    <div class="form-group mb-3">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group mb-3">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="form-group mb-3">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <!-- Select Course -->
+                    <div class="form-group mb-3">
+                        <label for="course">Select Course</label>
+                        <select class="form-control" id="course" name="course" required>
+                            <option value="" disabled selected>Select a course</option>
+                            <option value="Web Design">Web Design</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                            <option value="Internship Program">Internship Program</option>
+                        </select>
+                    </div>
+
+                    <!-- Query Textarea -->
+                    <div class="form-group mb-3">
+                        <label for="query">Your Query</label>
+                        <textarea class="form-control" id="query" name="query" placeholder="Enter your query or any questions you have" rows="4"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">Enroll Now</button>
+                </form>
+            </div>
         </div>
-        <div class="modal-body">
-          <!-- Enrollment form fields -->
-          <form id="enrollForm">
-            <!-- Name -->
-            <div class="form-group mb-3">
-              <label for="name">Full Name</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
-            </div>
-            
-            <!-- Email -->
-            <div class="form-group mb-3">
-              <label for="email">Email Address</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-  
-            <!-- Phone Number -->
-            <div class="form-group mb-3">
-              <label for="phone">Phone Number</label>
-              <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
-            </div>
-  
-            <!-- Select Course -->
-            <div class="form-group mb-3">
-              <label for="course">Select Course</label>
-              <select class="form-control" id="course" name="course" required>
-                <option value="" disabled selected>Select a course</option>
-                <option value="Web Design">Web Design</option>
-                <option value="Digital Marketing">Digital Marketing</option>
-                <option value="Internship Program">Internship Program</option>
-              </select>
-            </div>
-  
-            <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-      </div>
     </div>
-  </div>
-  <!-- Enrollment Modal End -->
-  
-  <!-- Thank You Modal -->
-  <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+</div>
+<!-- Enrollment Modal End -->
+
+<!-- Thank You Modal -->
+<div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered wow fadeInUp" data-wow-delay="0.2s">
-      <div class="modal-content">
-        <div class="modal-body text-dark">
-          Thank you for your enrollment. We will contact you soon with further details regarding the <strong><span id="selectedCourse"></span></strong> course. We look forward to helping you enhance your skills!
+        <div class="modal-content">
+            <div class="modal-body text-dark">
+                Thank you for your enrollment. We will contact you soon with further details regarding the <strong><span id="selectedCourse"></span></strong> course. We look forward to helping you enhance your skills!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-theme" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
     </div>
-  </div>
-  <!-- Thank You Modal End -->
+</div>
+<!-- Thank You Modal End -->
 
 
 

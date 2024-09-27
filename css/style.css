@@ -441,8 +441,8 @@
         font-size: 15px;
     }
     #about .icon-1 {
-        top: 30px;
-        left: 7%;
+        top: 18px;
+        left: 16%;
     }
     #about .icon-3 {
         top: 82%;
@@ -462,6 +462,12 @@
 
     #about .mobile-responsive-section .col-6 p {
         font-size: 14px; /* Adjust text size for smaller screens */
+    }
+
+    #about .circle-image-container, 
+    #about .circle-image-container img,
+    #about .circle-image-container .icon {
+        animation: none !important; /* Disable all animations */
     }
 }
 

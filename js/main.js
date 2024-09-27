@@ -157,6 +157,7 @@ if ($('.typed-text-output').length == 1) {
             const email = $("input[name='email']").val();
             const phone = $("input[name='phone']").val();
             const course = $("select[name='course']").val();
+            const query = $("textarea[name='query']").val(); // New field for user query
     
             // Create an array for the message lines
             const messageLines = [
@@ -164,7 +165,8 @@ if ($('.typed-text-output').length == 1) {
                 `Name:               ${fullName}`,
                 `Email:              ${email}`,
                 `Phone:              ${phone}`,
-                `Course:             ${course}`
+                `Course:             ${course}`,
+                `Query:              ${query}` // Include the query in the WhatsApp message
             ];
     
             // Join the message lines with line breaks
@@ -223,7 +225,7 @@ if ($('.typed-text-output').length == 1) {
             window.open(whatsappUrl, '_blank');
 
             // Show the thank you modal
-            $('#thankYouModal').modal('show');
+            $('#contactthankYouModal').modal('show');
         });
     });
 
