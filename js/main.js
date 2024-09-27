@@ -148,7 +148,7 @@ if ($('.typed-text-output').length == 1) {
         owl.trigger('to.owl.carousel', [index, 300]); // Go to the corresponding testimonial
     });
 
-
+    // Course
     $(document).ready(function() {
         $("#enrollForm").on("submit", function(event) {
             event.preventDefault(); // Prevent the default form submission
@@ -187,6 +187,42 @@ if ($('.typed-text-output').length == 1) {
             enrollModal.hide();
     
             // Show the thank you modal after the enrollment modal is hidden
+            $('#thankYouModal').modal('show');
+        });
+    });
+
+    // Contact Us
+    $(document).ready(function() {
+        $("#contactForm").on("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const fullName = $("input[name='name']").val();
+            const email = $("input[name='email']").val();
+            const phone = $("input[name='phone']").val();
+            const userMessage = $("textarea[name='message']").val();
+
+            // Create an array for the message lines
+            const messageLines = [
+                `Contact Request:`,
+                `Name:     ${fullName}`,
+                `Email:    ${email}`,
+                `Phone:    ${phone}`,
+                `Message:  ${userMessage}`
+            ];
+
+            // Join the message lines with line breaks
+            const message = messageLines.join('\n');
+
+            // Detect if the user is on mobile or desktop
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const whatsappUrl = isMobile 
+                ? `https://wa.me/8477924401?text=${encodeURIComponent(message)}`  // Mobile link
+                : `https://web.whatsapp.com/send?phone=8477924401&text=${encodeURIComponent(message)}`; // WhatsApp Web link
+
+            // Open WhatsApp link
+            window.open(whatsappUrl, '_blank');
+
+            // Show the thank you modal
             $('#thankYouModal').modal('show');
         });
     });

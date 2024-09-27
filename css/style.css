@@ -945,6 +945,12 @@
     border-radius: 5px;
 }
 
+/* Media Query for Mobile View */
+@media only screen and (max-width: 768px) {
+    .responsive-form {
+        padding: 1.9rem!important; /* Adjusted padding for mobile view */
+    }
+}
 
 /* Facts Counter Section Styling */
 .facts {
