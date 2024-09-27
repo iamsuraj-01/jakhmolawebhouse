@@ -1706,7 +1706,7 @@
 .footer-section {
     background-color: var(--primary); /* Yellow background */
     color: var(--light);
-    padding: 50px 0;
+    padding: 50px 0 0px 0px;
 }
 
 .footer-section .site-logo img {
