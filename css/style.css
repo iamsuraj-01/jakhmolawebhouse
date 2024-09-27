@@ -16,6 +16,10 @@
     color: #FFC448;
 }
 
+.bg-light {
+    background-color: #ededed!important;
+}
+
 .text-theme {
     color: #123e59;
 }
