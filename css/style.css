@@ -107,6 +107,12 @@
     font-weight: normal;
 }
 
+@media (max-width: 768px) {
+ .section-title {
+    font-size: 1.4rem!important;
+ }
+}
+
 
 /*** Navbar ***/
 .navbar.fixed-top {
