@@ -189,7 +189,7 @@ if ($('.typed-text-output').length == 1) {
             enrollModal.hide();
     
             // Show the thank you modal after the enrollment modal is hidden
-            $('#thankYouModal').modal('show');
+            $('#enrollThankyouModal').modal('show');
         });
     });
 
