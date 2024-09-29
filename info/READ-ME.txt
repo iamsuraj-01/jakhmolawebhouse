@@ -9,4 +9,4 @@
   =>  Author Website   : https://htmlcodex.com
 
 Technology: Bootstrap 5, CSS and Sass, Font Awesome 5 Extensions installed on Visual Studio Code: Live Sass Compiler (Glenn Marks) to run Sass, and Live Server (Ritwick Dey) to view output live (optional).
-Website - https://jakhmolaweb.co.in/
+Website: https://jakhmolaweb.co.in/
