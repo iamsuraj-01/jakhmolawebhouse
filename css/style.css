@@ -114,23 +114,33 @@
 }
 
 
-/*** Navbar ***/
-.navbar.fixed-top {
-    display: none;
-    transition: .5s;
+/* Initial transparent navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.1)!important; /* Transparent black background */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Navbar style when scrolled */
+.navbar.scrolled {
+    background-color: #fff!important; /* White background when scrolled */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for effect */
 }
 
 .navbar .navbar-nav .nav-link {
     padding: 20px 15px;
-    color: var(--dark);
+    color: #fff; /* White text on transparent background */
     font-size: 18px;
     font-weight: 600;
     outline: none;
 }
 
+.navbar.scrolled .navbar-nav .nav-link {
+    color: var(--dark); /* Dark text when navbar is white after scrolling */
+}
+
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 @media (max-width: 991.98px) {
@@ -144,9 +154,9 @@
     width: 110px; /* Adjust the width to suit your needs */
     height: auto; /* Keep aspect ratio */
     max-width: 100%; /* Ensure it scales properly in smaller containers */
+    border-radius: 20px;
 }
 
-/* Media query for responsiveness */
 @media (max-width: 768px) {
     .logo-img {
         width: 120px; /* Smaller size for smaller screens */
@@ -154,10 +164,24 @@
 }
 
 @media (max-width: 576px) {
+    /* Initial transparent navbar */
+    .navbar {
+        background-color: #fff!important; /* Transparent black background */
+    }
+    /* Ensure links are dark when navbar background is light */
+    .navbar .navbar-nav .nav-link {
+        color: var(--dark)!important; /* Dark text for better contrast */
+    }
+    .navbar .navbar-nav .nav-link:hover,
+    .navbar .navbar-nav .nav-link.active {
+        color: var(--secondary)!important;
+    }
     .logo-img {
-        width: 100px; /* Even smaller for mobile */
+        width: 60px; /* Even smaller for mobile */
+        border-radius: 10px;
     }
 }
+
 
 /*** Header ***/
 .typed-cursor {
