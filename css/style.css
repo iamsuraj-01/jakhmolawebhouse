@@ -116,14 +116,13 @@
 
 /* Initial transparent navbar */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.1)!important; /* Transparent black background */
-    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.01)!important; /* Transparent black background */
+    transition: background-color 0.9s ease, box-shadow 0.9s ease;
 }
 
 /* Navbar style when scrolled */
 .navbar.scrolled {
     background-color: #fff!important; /* White background when scrolled */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for effect */
 }
 
 .navbar .navbar-nav .nav-link {
