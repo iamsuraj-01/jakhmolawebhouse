@@ -116,7 +116,8 @@
 
 /* Initial transparent navbar */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.01)!important; /* Transparent black background */
+    background: transparent!important;
+    /* background-color: rgba(0, 0, 0, 0.01)!important;  Transparent black background */
     transition: background-color 0.9s ease, box-shadow 0.9s ease;
 }
 
@@ -127,7 +128,7 @@
 
 .navbar .navbar-nav .nav-link {
     padding: 20px 15px;
-    color: #fff; /* White text on transparent background */
+    color: var(--dark); /* White text on transparent background */
     font-size: 18px;
     font-weight: 600;
     outline: none;
@@ -135,6 +136,10 @@
 
 .navbar.scrolled .navbar-nav .nav-link {
     color: var(--dark); /* Dark text when navbar is white after scrolling */
+}
+
+.navbar.scrolled .navbar-nav .text-white {
+    color: var(--dark)!important; /* Dark text when navbar is white after scrolling */
 }
 
 .navbar .navbar-nav .nav-link:hover,
